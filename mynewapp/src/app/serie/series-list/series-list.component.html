@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Listado de Series</h1>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Canal</th>
+        <th>Temporadas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let serie of series" (click)="navigateToDetail(serie.id)">
+        <td>{{ serie.id }}</td>
+        <td>{{ serie.name }}</td>
+        <td>{{ serie.channel }}</td>
+        <td>{{ serie.seasons }}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4" style="text-align: center; font-weight: bold;">
+          Promedio de temporadas: {{ calculateAverageSeasons() }}
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+

@@ -1,0 +1,9 @@
+<div *ngIf="serie" class="container">
+  <h1>{{ serie.name }}</h1>
+  <img [src]="serie.poster" alt="{{ serie.name }}" style="width: 100%; max-height: 400px; object-fit: cover;">
+  <p><strong>Canal:</strong> {{ serie.channel }}</p>
+  <p><strong>Temporadas:</strong> {{ serie.seasons }}</p>
+  <p>{{ serie.description }}</p>
+  <a [href]="serie.webpage" target="_blank" class="btn btn-primary">Ver más detalles</a>
+</div>
+
